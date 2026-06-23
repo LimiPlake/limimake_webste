@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(to bottom right, #bd9838 10%, #a87e35 90%);
+  background-size: cover;
 }
 
 .topbar {
