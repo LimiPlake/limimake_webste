@@ -43,9 +43,12 @@ body {
 .column {
     flex: 1;
     padding: 20px;
-    color: white;
 }
 
 .column:not(:last-child) {
     border-right: 3px solid white;
+}
+
+#footer {
+    text-align: center;
 }
