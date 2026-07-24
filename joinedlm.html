@@ -2,22 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Thank You! | LimiMake</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
+    <title>Thank You | LimiMake</title>
+
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="joinedlm.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Thank You for Supporting LimiMake!</h1>
+    <header class="topbar">
+        <div class="logo">LimiMake</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
     </header>
 
     <main>
 
-        <section class="thankyou">
+        <section class="thank-you-message">
+            <h1>Thank You for Supporting LimiMake!</h1>
 
             <h2>Your Registration Has Been Received!</h2>
 
@@ -26,85 +36,112 @@
                 We have received your registration and will contact you
                 using the email address you provided.
             </p>
-
         </section>
 
-        <section class="summary">
-
+        <section class="registration-summary">
             <h2>Registration Summary</h2>
 
             <table>
 
-                <tr>
-                    <th>Full Name</th>
-                    <td id="fullname"></td>
-                </tr>
+                <tbody>
 
-                <tr>
-                    <th>Registering For</th>
-                    <td id="registeringFor"></td>
-                </tr>
+                    <tr>
+                        <th scope="row">Full Name</th>
+                        <td id="full-name">Not provided</td>
+                    </tr>
 
-                <tr>
-                    <th>Email</th>
-                    <td id="email"></td>
-                </tr>
+                    <tr>
+                        <th scope="row">Registering For</th>
+                        <td id="registering-for">Not provided</td>
+                    </tr>
 
-                <tr>
-                    <th>Starting Level</th>
-                    <td id="startingLevel"></td>
-                </tr>
+                    <tr>
+                        <th scope="row">Email</th>
+                        <td id="email">Not provided</td>
+                    </tr>
 
-                <tr>
-                    <th>Lesson Method</th>
-                    <td id="lessonMethod"></td>
-                </tr>
+                    <tr>
+                        <th scope="row">Starting Level</th>
+                        <td id="starting-level">Not provided</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Lesson Method</th>
+                        <td id="lesson-method">Not provided</td>
+                    </tr>
+
+                </tbody>
 
             </table>
-
         </section>
 
-        <section class="homebutton">
-
-            <a href="index.html" class="button">
+        <section class="home-button-area">
+            <a class="home-button" href="index.html">
                 Go Back Home
             </a>
-
         </section>
 
     </main>
 
     <script>
-
-        const registration = JSON.parse(
-            sessionStorage.getItem("limimakeRegistration")
+        const savedRegistration = sessionStorage.getItem(
+            "limimakeRegistration"
         );
 
-        if (registration) {
+        if (savedRegistration) {
+            const registration = JSON.parse(savedRegistration);
 
-            document.getElementById("fullname").textContent =
-                registration.firstName + " " + registration.lastName;
-
-            document.getElementById("registeringFor").textContent =
-                registration.registeringFor;
-
-            document.getElementById("email").textContent =
-                registration.email;
-
-            document.getElementById("startingLevel").textContent =
-                "Level " + registration.startingLevel;
-
-            const methods = {
-                inPerson: "In person",
-                lessons: "Online via LimiMake Lessons",
-                meetings: "Online via meetings"
+            const registeringForNames = {
+                "me": "Me",
+                "my-child": "My child"
             };
 
-            document.getElementById("lessonMethod").textContent =
-                methods[registration.lessonMethod];
+            const lessonMethodNames = {
+                "in-person": "In person",
+                "limimake-lessons":
+                    "Online via LimiMake Lessons",
+                "meetings": "Online via meetings"
+            };
 
+            const fullName = [
+                registration.firstName,
+                registration.lastName
+            ]
+                .filter(Boolean)
+                .join(" ");
+
+            document.getElementById(
+                "full-name"
+            ).textContent = fullName || "Not provided";
+
+            document.getElementById(
+                "registering-for"
+            ).textContent =
+                registeringForNames[
+                    registration.registeringFor
+                ] ||
+                registration.registeringFor ||
+                "Not provided";
+
+            document.getElementById(
+                "email"
+            ).textContent =
+                registration.email || "Not provided";
+
+            document.getElementById(
+                "starting-level"
+            ).textContent =
+                registration.startingLevel || "Not provided";
+
+            document.getElementById(
+                "lesson-method"
+            ).textContent =
+                lessonMethodNames[
+                    registration.lessonMethod
+                ] ||
+                registration.lessonMethod ||
+                "Not provided";
         }
-
     </script>
 
 </body>
