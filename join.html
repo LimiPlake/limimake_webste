@@ -27,7 +27,11 @@
             <p>Fill out the form below to join:</p>
         </section>
 
-        <form action="joinedlm.html" method="get">
+        <form 
+            id="join-form"
+            action="https://formspree.io/f/xaqrlwrg"
+            method="POST"
+        >
 
             <table class="join-table">
 
@@ -162,6 +166,17 @@
                 </tbody>
 
             </table>
+
+            <input
+    type="hidden"
+    name="_subject"
+    value="New LimiMake Registration"
+>
+            <input
+    type="hidden"
+    name="_next"
+    value="https://limiplake.com/joinedlm.html"
+>
 
             <div class="submit-area">
                 <button type="submit">Go!</button>
