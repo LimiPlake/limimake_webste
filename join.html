@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="join.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Join LimiMake</title>
 
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="join.css">
 </head>
 
@@ -22,12 +25,13 @@
     </header>
 
     <main>
+
         <section class="join-heading">
             <h1>Join LimiMake</h1>
             <p>Fill out the form below to join:</p>
         </section>
 
-        <form 
+        <form
             id="join-form"
             action="https://formspree.io/f/xaqrlwrg"
             method="POST"
@@ -39,11 +43,18 @@
 
                     <tr class="name-row">
                         <th scope="row">
-                            <label for="first-name">Full Name</label>
+                            Full Name
                         </th>
 
                         <td>
                             <div class="name-inputs">
+
+                                <label for="first-name">
+                                    <span class="visually-hidden">
+                                        First Name
+                                    </span>
+                                </label>
+
                                 <input
                                     type="text"
                                     id="first-name"
@@ -52,6 +63,12 @@
                                     required
                                 >
 
+                                <label for="last-name">
+                                    <span class="visually-hidden">
+                                        Last Name
+                                    </span>
+                                </label>
+
                                 <input
                                     type="text"
                                     id="last-name"
@@ -59,6 +76,7 @@
                                     placeholder="Last Name"
                                     required
                                 >
+
                             </div>
                         </td>
                     </tr>
@@ -78,6 +96,7 @@
                                         value="me"
                                         required
                                     >
+
                                     <span>Me</span>
                                 </label>
 
@@ -87,6 +106,7 @@
                                         name="registeringFor"
                                         value="my-child"
                                     >
+
                                     <span>My child</span>
                                 </label>
 
@@ -95,13 +115,28 @@
                     </tr>
 
                     <tr>
-                        <th scope="row"><label for="email">Email</label></th>
-                        <td><input type="email" placeholder="_________@_________.com" id="e-mail" name="eMail" required></td>
+                        <th scope="row">
+                            <label for="email">
+                                Email
+                            </label>
+                        </th>
+
+                        <td>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="_________@_________.com"
+                                required
+                            >
+                        </td>
                     </tr>
 
                     <tr>
                         <th scope="row">
-                            <label for="starting-level">Starting level</label>
+                            <label for="starting-level">
+                                Starting level
+                            </label>
                         </th>
 
                         <td>
@@ -110,15 +145,29 @@
                                 name="startingLevel"
                                 required
                             >
-                                <option value="dfd" selected disabled>
+                                <option value="" selected disabled>
                                     Choose a level from 1-5
                                 </option>
 
-                                <option value="1">Level 1 — ScratchJr</option>
-                                <option value="2">Level 2 — Scratch</option>
-                                <option value="3">Level 3 — Logo</option>
-                                <option value="4">Level 4 — Python</option>
-                                <option value="5">Level 5 — Web Development</option>
+                                <option value="Level 1 — ScratchJr">
+                                    Level 1 — ScratchJr
+                                </option>
+
+                                <option value="Level 2 — Scratch">
+                                    Level 2 — Scratch
+                                </option>
+
+                                <option value="Level 3 — Logo">
+                                    Level 3 — Logo
+                                </option>
+
+                                <option value="Level 4 — Python">
+                                    Level 4 — Python
+                                </option>
+
+                                <option value="Level 5 — Web Development">
+                                    Level 5 — Web Development
+                                </option>
                             </select>
                         </td>
                     </tr>
@@ -138,6 +187,7 @@
                                         value="in-person"
                                         required
                                     >
+
                                     <span>In person</span>
                                 </label>
 
@@ -147,7 +197,10 @@
                                         name="lessonMethod"
                                         value="limimake-lessons"
                                     >
-                                    <span>Online via LimiMake Lessons</span>
+
+                                    <span>
+                                        Online via LimiMake Lessons
+                                    </span>
                                 </label>
 
                                 <label class="radio-label meetings-option">
@@ -156,7 +209,10 @@
                                         name="lessonMethod"
                                         value="meetings"
                                     >
-                                    <span>Online via meetings</span>
+
+                                    <span>
+                                        Online via meetings
+                                    </span>
                                 </label>
 
                             </div>
@@ -168,22 +224,28 @@
             </table>
 
             <input
-    type="hidden"
-    name="_subject"
-    value="New LimiMake Registration"
->
+                type="hidden"
+                name="_subject"
+                value="New LimiMake Registration"
+            >
+
             <input
-    type="hidden"
-    name="_next"
-    value="https://limiplake.com/joinedlm.html"
->
+                type="hidden"
+                name="_next"
+                value="https://limiplake.com/joinedlm.html"
+            >
 
             <div class="submit-area">
-                <button type="submit">Go!</button>
+                <button type="submit">
+                    Go!
+                </button>
             </div>
 
         </form>
+
     </main>
-<script src="join.js"></script>
+
+    <script src="join.js"></script>
+
 </body>
 </html>
