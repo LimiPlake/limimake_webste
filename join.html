@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="join.css">
 
     <title>Join LimiMake</title>
 
@@ -22,7 +24,7 @@
     <main>
         <section class="join-heading">
             <h1>Join LimiMake</h1>
-            <p>Type/select your answers:</p>
+            <p>Fill out the form below to join:</p>
         </section>
 
         <form action="joinedlm.html" method="get">
@@ -89,6 +91,11 @@
                     </tr>
 
                     <tr>
+                        <th scope="row"><label for="email">Email</label></th>
+                        <td><input type="email" placeholder="_________@_________.com" id="e-mail" name="eMail" required></td>
+                    </tr>
+
+                    <tr>
                         <th scope="row">
                             <label for="starting-level">Starting level</label>
                         </th>
@@ -99,8 +106,8 @@
                                 name="startingLevel"
                                 required
                             >
-                                <option value="" selected disabled>
-                                    Level 1-6 - 1: ScratchJr, 2: Scratch, 3: Logo, 4: Python, 5: Web Dev
+                                <option value="dfd" selected disabled>
+                                    Choose a level from 1-5
                                 </option>
 
                                 <option value="1">Level 1 — ScratchJr</option>
@@ -108,7 +115,6 @@
                                 <option value="3">Level 3 — Logo</option>
                                 <option value="4">Level 4 — Python</option>
                                 <option value="5">Level 5 — Web Development</option>
-                                <option value="6">Level 6</option>
                             </select>
                         </td>
                     </tr>
