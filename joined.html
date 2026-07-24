@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thank You! | LimiMake</title>
+
+    <link rel="stylesheet" href="joinedlm.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Thank You for Supporting LimiMake!</h1>
+    </header>
+
+    <main>
+
+        <section class="thankyou">
+
+            <h2>Your Registration Has Been Received!</h2>
+
+            <p>
+                Thank you for supporting LimiMake, a part of LimiPlake.
+                We have received your registration and will contact you
+                using the email address you provided.
+            </p>
+
+        </section>
+
+        <section class="summary">
+
+            <h2>Registration Summary</h2>
+
+            <table>
+
+                <tr>
+                    <th>Full Name</th>
+                    <td id="fullname"></td>
+                </tr>
+
+                <tr>
+                    <th>Registering For</th>
+                    <td id="registeringFor"></td>
+                </tr>
+
+                <tr>
+                    <th>Email</th>
+                    <td id="email"></td>
+                </tr>
+
+                <tr>
+                    <th>Starting Level</th>
+                    <td id="startingLevel"></td>
+                </tr>
+
+                <tr>
+                    <th>Lesson Method</th>
+                    <td id="lessonMethod"></td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <section class="homebutton">
+
+            <a href="index.html" class="button">
+                Go Back Home
+            </a>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        const registration = JSON.parse(
+            sessionStorage.getItem("limimakeRegistration")
+        );
+
+        if (registration) {
+
+            document.getElementById("fullname").textContent =
+                registration.firstName + " " + registration.lastName;
+
+            document.getElementById("registeringFor").textContent =
+                registration.registeringFor;
+
+            document.getElementById("email").textContent =
+                registration.email;
+
+            document.getElementById("startingLevel").textContent =
+                "Level " + registration.startingLevel;
+
+            const methods = {
+                inPerson: "In person",
+                lessons: "Online via LimiMake Lessons",
+                meetings: "Online via meetings"
+            };
+
+            document.getElementById("lessonMethod").textContent =
+                methods[registration.lessonMethod];
+
+        }
+
+    </script>
+
+</body>
+</html>
