@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Join LimiMake</title>
+
+    <link rel="stylesheet" href="join.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="logo">LimiMake</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="join-heading">
+            <h1>Join LimiMake</h1>
+            <p>Type/select your answers:</p>
+        </section>
+
+        <form action="joinedlm.html" method="get">
+
+            <table class="join-table">
+
+                <tbody>
+
+                    <tr class="name-row">
+                        <th scope="row">
+                            <label for="first-name">Full Name</label>
+                        </th>
+
+                        <td>
+                            <div class="name-inputs">
+                                <input
+                                    type="text"
+                                    id="first-name"
+                                    name="firstName"
+                                    placeholder="First Name"
+                                    required
+                                >
+
+                                <input
+                                    type="text"
+                                    id="last-name"
+                                    name="lastName"
+                                    placeholder="Last Name"
+                                    required
+                                >
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">
+                            Who are you registering for?
+                        </th>
+
+                        <td>
+                            <div class="radio-options register-options">
+
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="registeringFor"
+                                        value="me"
+                                        required
+                                    >
+                                    <span>Me</span>
+                                </label>
+
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="registeringFor"
+                                        value="my-child"
+                                    >
+                                    <span>My child</span>
+                                </label>
+
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">
+                            <label for="starting-level">Starting level</label>
+                        </th>
+
+                        <td>
+                            <select
+                                id="starting-level"
+                                name="startingLevel"
+                                required
+                            >
+                                <option value="" selected disabled>
+                                    Level 1-6 - 1: ScratchJr, 2: Scratch, 3: Logo, 4: Python, 5: Web Dev
+                                </option>
+
+                                <option value="1">Level 1 — ScratchJr</option>
+                                <option value="2">Level 2 — Scratch</option>
+                                <option value="3">Level 3 — Logo</option>
+                                <option value="4">Level 4 — Python</option>
+                                <option value="5">Level 5 — Web Development</option>
+                                <option value="6">Level 6</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr class="lesson-method-row">
+                        <th scope="row">
+                            How would you like to get to us?
+                        </th>
+
+                        <td>
+                            <div class="radio-options lesson-options">
+
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="lessonMethod"
+                                        value="in-person"
+                                        required
+                                    >
+                                    <span>In person</span>
+                                </label>
+
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="lessonMethod"
+                                        value="limimake-lessons"
+                                    >
+                                    <span>Online via LimiMake Lessons</span>
+                                </label>
+
+                                <label class="radio-label meetings-option">
+                                    <input
+                                        type="radio"
+                                        name="lessonMethod"
+                                        value="meetings"
+                                    >
+                                    <span>Online via meetings</span>
+                                </label>
+
+                            </div>
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <div class="submit-area">
+                <button type="submit">Go!</button>
+            </div>
+
+        </form>
+    </main>
+
+</body>
+</html>
