@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    background-color: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Thank-you heading section */
+
+.thank-you-section {
+    width: 100%;
+    min-height: 270px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 45px 40px 35px;
+
+    border-bottom: 3px solid black;
+
+    text-align: center;
+}
+
+.thank-you-section h1 {
+    margin: 0 0 35px;
+
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.thank-you-section h2 {
+    margin: 0 0 32px;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.thank-you-section p {
+    max-width: 1450px;
+    margin: 0;
+
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+/* Bottom registration section */
+
+.registration-section {
+    width: 100%;
+    min-height: 650px;
+
+    display: grid;
+    grid-template-columns: 47% 53%;
+}
+
+/* Left side */
+
+.review-message {
+    padding: 38px 65px;
+
+    border-right: 3px solid black;
+}
+
+.review-message h2 {
+    margin: 0;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Right side */
+
+.summary-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 28px 55px 65px;
+}
+
+/* Registration table */
+
+.registration-table {
+    width: min(640px, 100%);
+
+    border: 1px solid #555;
+    border-collapse: collapse;
+
+    table-layout: fixed;
+
+    background-color: white;
+}
+
+.registration-table th,
+.registration-table td {
+    width: 50%;
+    height: 92px;
+
+    padding: 18px 24px;
+
+    border-left: 1px solid #555;
+
+    vertical-align: middle;
+
+    font-size: 1.25rem;
+}
+
+.registration-table th:first-child,
+.registration-table td:first-child {
+    border-left: none;
+}
+
+.registration-table th {
+    font-weight: 700;
+    text-align: center;
+}
+
+.registration-table td {
+    font-weight: 400;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* Home button */
+
+.home-button {
+    width: 280px;
+    min-height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 55px;
+    padding: 7px 20px;
+
+    border: 3px solid black;
+
+    background-color: white;
+    color: black;
+
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.home-button:hover {
+    background-color: #eeeeee;
+}
+
+.home-button:active {
+    transform: translateY(2px);
+}
+
+.home-button:focus-visible {
+    outline: 4px solid rgba(0, 60, 255, 0.35);
+    outline-offset: 4px;
+}
+
+/* Medium screens */
+
+@media (max-width: 950px) {
+    .thank-you-section h1 {
+        font-size: 2.6rem;
+    }
+
+    .thank-you-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .thank-you-section p {
+        font-size: 1.1rem;
+    }
+
+    .registration-section {
+        grid-template-columns: 42% 58%;
+    }
+
+    .review-message {
+        padding: 35px 30px;
+    }
+
+    .summary-area {
+        padding: 28px 30px 55px;
+    }
+
+    .registration-table th,
+    .registration-table td {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+}
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+    .thank-you-section {
+        min-height: auto;
+        padding: 40px 22px;
+    }
+
+    .thank-you-section h1 {
+        margin-bottom: 25px;
+        font-size: 2rem;
+    }
+
+    .thank-you-section h2 {
+        margin-bottom: 22px;
+        font-size: 1.25rem;
+    }
+
+    .thank-you-section p {
+        font-size: 1rem;
+    }
+
+    .registration-section {
+        display: block;
+        min-height: auto;
+    }
+
+    .review-message {
+        padding: 25px 20px;
+
+        border-right: none;
+        border-bottom: 3px solid black;
+
+        text-align: center;
+    }
+
+    .review-message h2 {
+        font-size: 1.3rem;
+    }
+
+    .summary-area {
+        padding: 30px 18px 45px;
+    }
+
+    .registration-table {
+        width: 100%;
+    }
+
+    .registration-table th,
+    .registration-table td {
+        height: 80px;
+        padding: 12px 10px;
+        font-size: 1rem;
+    }
+
+    .home-button {
+        width: 230px;
+        margin-top: 35px;
+        font-size: 1.05rem;
+    }
+}
